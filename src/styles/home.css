@@ -1,0 +1,171 @@
+.home {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  color: white;
+  overflow: hidden;
+}
+
+.home-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+/* Content */
+.home-content {
+  flex: 1;
+  min-width: 280px;
+}
+
+.username {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.profession {
+  font-size: 1.8rem;
+  margin: 10px 0;
+  color: #00d4ff;
+}
+
+.caption {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  max-width: 500px;
+}
+
+/* Image */
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  min-width: 280px;
+}
+
+.profile-image {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 0 40px #00d4ff;
+  transition: 0.4s ease;
+}
+
+/* Glow Ring */
+.image-container::before {
+  content: "";
+  position: absolute;
+  width: 330px;
+  height: 330px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #00d4ff 0%, transparent 70%);
+  animation: glow 2.5s infinite alternate;
+  z-index: 1;
+}
+
+@keyframes glow {
+  from {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  to {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+/* ------------------- */
+/* Tablet Responsive */
+/* ------------------- */
+@media (max-width: 992px) {
+  .username {
+    font-size: 2.5rem;
+  }
+
+  .profession {
+    font-size: 1.5rem;
+  }
+
+  .profile-image {
+    width: 250px;
+    height: 250px;
+  }
+
+  .image-container::before {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+/* ------------------- */
+/* Mobile Responsive */
+/* ------------------- */
+@media (max-width: 768px) {
+
+  .home {
+    padding: 40px 15px;
+  }
+
+  .home-container {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .username {
+    font-size: 2rem;
+  }
+
+  .profession {
+    font-size: 1.2rem;
+  }
+
+  .caption {
+    font-size: 1rem;
+    margin: 0 auto;
+  }
+
+  .profile-image {
+    width: 200px;
+    height: 200px;
+  }
+
+  .image-container::before {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 480px) {
+
+  .username {
+    font-size: 1.8rem;
+  }
+
+  .profession {
+    font-size: 1rem;
+  }
+
+  .profile-image {
+    width: 170px;
+    height: 170px;
+  }
+
+  .image-container::before {
+    width: 190px;
+    height: 190px;
+  }
+}
