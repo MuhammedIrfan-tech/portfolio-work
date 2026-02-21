@@ -3,7 +3,7 @@ import '../styles/navbar.css';
 import { FaLinkedin, FaGithub, FaInstagram, FaFileAlt } from "react-icons/fa";
 import resume from '../assets/resume.webp';
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  
 
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
