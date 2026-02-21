@@ -10,7 +10,7 @@ const Navbar = () => {
       <div className="container">
         
         {/* Logo */}
-        <a className="navbar-brand fw-bold" href="#" data-aos="fade-right">
+        <a className="navbar-brand fw-bold" href="/" data-aos="fade-right">
           MyPortfolio
         </a>
 
